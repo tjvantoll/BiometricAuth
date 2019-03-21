@@ -5,8 +5,8 @@ import { Injectable } from "@angular/core";
 import { Kinvey } from "kinvey-nativescript-sdk";
 
 Kinvey.init({
-    appKey: "kid_SyY8LYO8M",
-    appSecret: "09282985d7c540f7b076a9c7fd884c77"
+    appKey: "kid_rkDJUINIQ",
+    appSecret: "17282f9d91da4af7b398855e32ea4dd0"
 });
 
 export class BackendService {

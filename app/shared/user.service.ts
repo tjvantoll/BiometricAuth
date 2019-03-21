@@ -5,31 +5,19 @@ import { Injectable } from "@angular/core";
 import { Kinvey } from "kinvey-nativescript-sdk";
 import { getBoolean, setBoolean } from "tns-core-modules/application-settings";
 
-import { User } from "./user.model";
-
 @Injectable()
 export class UserService {
-    register(user: User) {
-        return Kinvey.User.signup({ username: user.email, password: user.password })
-            .catch(this.handleErrors);
-    }
-
     isLoggedIn() {
         return !!Kinvey.User.getActiveUser();
     }
 
-    login(user: User) {
-        return Kinvey.User.login(user.email, user.password)
+    login() {
+        return Kinvey.User.loginWithMIC("sde://")
             .catch(this.handleErrors);
     }
 
     logout() {
         return Kinvey.User.logout()
-            .catch(this.handleErrors);
-    }
-
-    resetPassword(email) {
-        return Kinvey.User.resetPassword(email)
             .catch(this.handleErrors);
     }
 
