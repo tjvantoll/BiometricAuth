@@ -8,11 +8,11 @@
     "version": "3.1.1",
     "pluginsData": {
         "kinvey-nativescript-sdk": {
-          "config": {
-            "appKey": "kid_rkDJUINIQ",
-            "appSecret": "17282f9d91da4af7b398855e32ea4dd0",
-            "redirectUri": "sde://"
-          }
+            "config": {
+                "appKey": "kid_rkDJUINIQ",
+                "appSecret": "17282f9d91da4af7b398855e32ea4dd0",
+                "redirectUri": "sde://"
+            }
         }
-      }
+    }
 }

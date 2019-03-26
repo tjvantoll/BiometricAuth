@@ -1,6 +1,3 @@
-// The following is a sample implementation of a backend service using Progress Kinvey (https://www.progress.com/kinvey).
-// Feel free to swap in your own service / APIs / etc here for your own apps.
-
 import { Injectable } from "@angular/core";
 import { Kinvey } from "kinvey-nativescript-sdk";
 import { getBoolean, setBoolean } from "tns-core-modules/application-settings";
@@ -12,7 +9,7 @@ export class UserService {
     }
 
     login() {
-        return Kinvey.User.loginWithMIC("sde://")
+        return Kinvey.User.loginWithMIC()
             .catch(this.handleErrors);
     }
 

@@ -4,14 +4,15 @@
 import { Injectable } from "@angular/core";
 import { Kinvey } from "kinvey-nativescript-sdk";
 
-Kinvey.init({
-    appKey: "kid_rkDJUINIQ",
-    appSecret: "17282f9d91da4af7b398855e32ea4dd0"
-});
+Kinvey.init();
 
 export class BackendService {
     static isUserLoggedIn() {
+        // Hardcoding false just to make biometric auth easier to test by
+        // always starting the app on the login screen.
         return false;
+
+        // In a production setting use the following code 
         // return !!Kinvey.User.getActiveUser();
     }
 }
